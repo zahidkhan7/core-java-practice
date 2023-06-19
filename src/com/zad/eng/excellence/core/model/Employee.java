@@ -2,10 +2,10 @@ package com.zad.eng.excellence.core.model;
 
 import java.util.Comparator;
 
-/* Explanation with example for  HashCode and Equals methods:
- * 
- * http://tutorials.jenkov.com/java-collections/hashcode-equals.html
- * 
+/* 
+ Explanation with example for  HashCode and Equals methods:
+ http://tutorials.jenkov.com/java-collections/hashcode-equals.html
+ 
  */
 public class Employee {
 
@@ -39,22 +39,40 @@ public class Employee {
     }
 
     /*
-     * We want that equality should be defined on the basis of employeeId,
-     * firstName & lastName public boolean equals(Object o){ if(o == null)
-     * return false; if(!(o instanceof) Employee) return false;
-     * 
-     * Employee other = (Employee) o; if(this.employeeId != other.employeeId)
-     * return false; if(! this.firstName.equals(other.firstName)) return false;
-     * if(! this.lastName.equals(other.lastName)) return false;
-     * 
-     * return true; }
+     We want that equality should be defined on the 
+     basis of employeeId,firstName & lastName 
      */
+     
+    /*
+	public boolean equals(Object object) {
+		if (object == null)
+			return false;
+		if (!(object instanceof Employee))
+			return false;
+
+		Employee other = (Employee) object;
+		if (this.employeeId != other.employeeId)
+			return false;
+		if (!this.firstName.equals(other.firstName))
+			return false;
+		if (!this.lastName.equals(other.lastName))
+			return false;
+
+		return true;
+	}
+	*/
+    
 
     /*
-     * We want that hashCode should be generated considering employeeId,
-     * firstName & lastName public int hashCode() { return (int) employeeId *
-     * firstName.hashCode() * lastName.hashCode(); }
+     We want that hashCode should be generated 
+     considering employeeId,firstName & lastName 
      */
+    
+    /*
+	public int hashCode() {
+		return (int) employeeId * firstName.hashCode() * lastName.hashCode();
+	}
+	*/
 
     public static final Comparator<Employee> IdComparator = new Comparator<Employee>() {
 
