@@ -3,6 +3,7 @@ package com.zad.eng.excellence.core.util;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import java.util.LinkedList;
 
 import com.zad.eng.excellence.core.model.Customer;
 import com.zad.eng.excellence.core.model.Employee;
@@ -26,11 +27,10 @@ public class DataSetPreperationUtil {
 		personCollection.add(person5);
 		personCollection.add(person6);
 		return personCollection;
-
 	}
 
 
-    public List<String> prepareAndGetNameList() {
+    public static List<String> prepareAndGetNameList() {
         List<String> nameList = new ArrayList<>();
         nameList.add("Danish");
         nameList.add("Imran");
@@ -40,6 +40,7 @@ public class DataSetPreperationUtil {
         nameList.add("Shahid");
         return nameList;
     }
+    
 
     /**** Helper Method  - This Method Prepares Employee List ****/
     public static List<Employee> prepareAndGetEmployeeList() {
@@ -65,7 +66,6 @@ public class DataSetPreperationUtil {
 		customerList.add(new Customer(104, "Toby", "Sen@abc.com", 8974758334L));
 		customerList.add(new Customer(105, "Harry ", "Poter@abc.com", 8974758744L));
 		return customerList;
-
 	}
 
 }
